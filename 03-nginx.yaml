@@ -1,11 +1,10 @@
 - name: install nginx
   hosts: frontend
   become: yes
-  gather_facts: false
   tasks:
   - name: print some facts
     debug:
-        msg: "OS is {{ ansible_distribution }} {{ ansible_distribution_version }}"
+        msg: "{{ ansible_facts }}"
   - name: install nginx
     package:
       name: nginx
