@@ -1,6 +1,7 @@
 - name: install nginx
   hosts: frontend
   become: yes
+  gather_facts: false
   tasks:
   - name: install nginx
     package:
