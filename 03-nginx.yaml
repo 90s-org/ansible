@@ -5,6 +5,9 @@
   - name: print some facts
     debug:
         msg: "{{ ansible_facts }}"
+  - name: print some facts
+    debug:
+        msg: "{{ ansible_facts[distribution] }}"
   - name: install nginx
     package:
       name: nginx
